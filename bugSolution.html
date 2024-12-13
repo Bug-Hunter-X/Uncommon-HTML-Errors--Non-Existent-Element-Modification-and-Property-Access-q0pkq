@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Check if element exists before attempting to modify it
+    const element = document.getElementById('myDiv');
+    if (element) {
+      element.innerHTML = "Text changed successfully!";
+    } else {
+      console.warn('Element with id "myDiv" not found!');
+    }
+
+    //Check for property existence before accessing it
+    if(element && element.hasOwnProperty('textContent')){
+        console.log(element.textContent);
+    } else {
+        console.warn('Element or property does not exist.');
+    }
+  </script>
+</body>
+</html>
